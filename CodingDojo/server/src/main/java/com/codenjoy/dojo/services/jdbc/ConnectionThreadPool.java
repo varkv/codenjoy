@@ -44,6 +44,7 @@ public class ConnectionThreadPool {
                 try {
                     connection = get.connection();
                 } catch (Exception e) {
+                    e.printStackTrace();
                     throw new RuntimeException("Error get connection", e);
                 }
                 connections.add(connection);
