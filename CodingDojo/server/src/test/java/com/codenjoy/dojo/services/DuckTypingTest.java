@@ -84,7 +84,7 @@ public class DuckTypingTest {
 
     interface ParametrizedMonster {
         String quack(Object object);
-        String moo(Object object);
+        String moo();
     }
 
     interface OtherLanguageMonster {
