@@ -34,6 +34,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -46,8 +47,22 @@ import static org.mockito.Mockito.when;
 
 public class PlayerGameSaverTest {
 
-    private static final long TIME = 1382702580000L;
+
+    private static long TIME;
     private PlayerGameSaver saver;
+
+    @Before
+    public void setTIME() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.YEAR, 2013);
+        calendar.set(Calendar.MONTH, 9);
+        calendar.set(Calendar.DATE, 25);
+        calendar.set(Calendar.HOUR_OF_DAY, 15);
+        calendar.set(Calendar.MINUTE, 3);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        TIME = calendar.getTime().getTime();
+    }
 
     @Before
     public void removeAll() {
